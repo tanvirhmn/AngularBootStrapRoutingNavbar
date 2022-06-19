@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-bootstrap-form',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BootstrapFormComponent implements OnInit {
 
+  employee : {id:any, name:any, description:any, email:any} = {id: null, name: "", description: "", email: ""};
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
+  createEmployee(){
+    console.log("Employee created: ", this.employee);
+    this.employee = {id: null, name: "", description: "", email: ""};
+
+  }
 }
